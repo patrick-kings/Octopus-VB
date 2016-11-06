@@ -9,10 +9,10 @@ Namespace Controllers
     Public Class MobileController
         Inherits ApiController 'the controller should inherit from the ApiController class
 
-private message As string = "Thank you for using AfricsTalking API"
+        Private message As String = "Thank you for consuming AfricsTalking API"
 
         '
-        ' initiate comm with user
+        ' initiate communication with the user
         '     
 
         <Route("ussd")>         ' specify the actual route, your url will now look like... localhost:8080/api/mobile/ussd...
@@ -80,10 +80,11 @@ private message As string = "Thank you for using AfricsTalking API"
                 httpResponseMessage.Content = New StringContent(response, Encoding.UTF8, "text/plain")
 
                 Return httpResponseMessage
+            Else
+                httpResponseMessage = Request.CreateResponse(HttpStatusCode.OK)
+                Return httpResponseMessage
             End If
 
-            httpResponseMessage = Request.CreateResponse(HttpStatusCode.OK)
-            Return httpResponseMessage
         End Function
 
 
