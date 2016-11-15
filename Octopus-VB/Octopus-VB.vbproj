@@ -178,7 +178,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">

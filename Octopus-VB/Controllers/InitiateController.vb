@@ -15,8 +15,6 @@ Namespace Controllers
 
         Public Sub sendMessage(phoneNumber, message)
 
-
-
             gateway.sendMessage(phoneNumber, message)
 
         End Sub
@@ -26,8 +24,6 @@ Namespace Controllers
         '
 
         Public Sub makeCall(phoneNumber)
-
-
 
             gateway.call(AT_virtualNumber, phoneNumber)
 
